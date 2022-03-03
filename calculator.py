@@ -12,7 +12,8 @@ tip = float(input('What percentage of the tip must be paid ? ' ))
 
 def tip_of_bill(bill, people , tip ):
    result =  bill * tip/100
-   result = result / people
+   result = float(result / people)
+   result = round(number= result, ndigits= 2)
    return  str(result)
 
 print(" Each will pay exactly $" + tip_of_bill(bill= bill, people=people, tip= tip) + " Dollars")    
